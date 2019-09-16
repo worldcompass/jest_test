@@ -29,7 +29,33 @@ const getCenteredElements = x => {
         return x[Math.floor(x.length / 2)]
     }
 }
-module.exports = {isEven, add5, getArrayLength, getFirstElement, getLastElement, getCenteredElements};
+
+//arrays functions
+
+const  deleteFirstElement = x => {
+    return x.shift();
+}
+
+const pushElementToEnd = (array, value) => {
+    array.push(value);
+    return array;
+}
+
+const changeSecondElement = (array, value) => {
+    array[1] = value;
+    return array;
+};
+
+const addValeToStart = (array, value) => {
+    array.unshift(value);
+    return array;
+};
+
+module.exports = {
+    isEven, add5, getArrayLength, getFirstElement, getLastElement, getCenteredElements, 
+    deleteFirstElement, pushElementToEnd,
+    changeSecondElement,
+    addValeToStart};
 
 
 

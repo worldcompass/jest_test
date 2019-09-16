@@ -45,7 +45,7 @@ test('check if "lol" is not even', () => {
 
 //test arrays
 
-test('check array lenght to equal 3', () => {
+test('get array lenght to equal 3', () => {
   expect(functions.getArrayLength([1,2,3])).toEqual(3);
 });
 
@@ -57,10 +57,28 @@ test('get last element array to be 3', () => {
   expect(functions.getLastElement([1,2,3])).toBe(3);
 });
 
-test('center element of array to be 2', () => {
+test('get center element of array to be 2', () => {
   expect(functions.getCenteredElements([1,2,3])).toBe(2);
 });
 
-test('average sum of centered elements of array to be 2.5', () => {
+test('get average sum of centered elements of array to be 2.5', () => {
   expect(functions.getCenteredElements([1,2,3,4])).toBe(2.5);
+});
+
+// arrays functions tests
+
+test('delete first element from array', () => {
+  expect(functions.deleteFirstElement(["I", "go", "home"])).toBe('I');
+});
+
+test('push element to end of array', () => {
+  expect(functions.addElementToEnd(["I", "go", "home"], 'right now')).toEqual(["I", "go", "home", 'right now']);
+});
+
+test('change second item in array to be "loool"', () => {
+  expect(functions.changeSecondElement(["I", "go", "home"], 'loool')).toEqual(["I", "loool", "home"]);
+});
+
+test('add value  "yesterday" to the ["I", "went", "home"] end of array', () => {
+  expect(functions.addValeToStart(["I", "went", "home"], "yesterday")).toEqual(["yesterday", "I", "went", "home"]);
 });

@@ -82,3 +82,33 @@ test('change second item in array to be "loool"', () => {
 test('add value  "yesterday" to the ["I", "went", "home"] end of array', () => {
   expect(functions.addValeToStart(["I", "went", "home"], "yesterday")).toEqual(["yesterday", "I", "went", "home"]);
 });
+
+//test for sort, map
+
+test('get each element of array increased by 2', () => {
+  expect(functions.increaseEachItemBy2([1,2,3])).toEqual([3,4,5]);
+});
+
+test('get array of strings containing letters before hyphen', () => {
+  expect(functions.getFirstPart(['abc-efg','wer-sdf','ert-dfg'])).toEqual(['abc','wer','ert']);
+});
+
+test('get array which contains values bigger than 20', () => {
+  expect(functions.getLargerThan20([1,5,20,100,200])).toEqual([100, 200]);
+});
+
+test('get sum of array', () => {
+  expect(functions.getSumOfAllArray([1,5,20,100,200])).toEqual(326);
+});
+
+test('get all items in upper case', () => {
+  expect(functions.getAlltoUpperCase(['a','b','c','d','e'])).toEqual(['A','B','C','D','E']);
+})
+
+test('get sorted array', () => {
+  expect(functions.getSortedArray([1,2,3,4,234,88,32,5,42,80])).toEqual([1,2,3,4,5,32,42,80,88,234]);
+});
+
+test('get reversed sorted array', () => {
+  expect(functions.getReversedSortedArray(['aasdsad','sdfsd','sdaxc','aab'])).toEqual(["sdfsd", "sdaxc", "aasdsad", "aab"]);
+});

@@ -58,9 +58,8 @@ const increaseEachItemBy2 = array => {
     return array.map(i => i + 2 );
 };
 
-const getFirstPart = array => {
-    let answer = array.join('-').split('-');
-    return [answer[0], answer[2], answer[4]];
+const getFirstPart = array => {    
+    return array.map(x => x.split('-')[0]);
 };
 
 const getLargerThan20 = array => {
@@ -72,7 +71,7 @@ const getSumOfAllArray = array => {
 };
 
 const getAlltoUpperCase = array => {
-    return array.join(', ').toUpperCase().split(', ');
+    return array.map(x => x.toUpperCase());
 };
 
 const getSortedArray = array => {

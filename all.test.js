@@ -126,3 +126,9 @@ describe('testing of the sort/map function', () => {
     expect(sortFunctions.getReversedSortedArray(['aasdsad','sdfsd','sdaxc','aab'])).toEqual(["sdfsd", "sdaxc", "aasdsad", "aab"]);
   });
 });
+
+
+test('sort dishes', () => {
+  expect(sortFunctions.sortDishes(['вилка','маленькаяТарелка','ложка','маленькаяЧашка','большаяТарелка','нож']))
+  .toEqual([['большаяТарелка', 'маленькаяТарелка'], ['маленькаяЧашка'], ['вилка', 'ложка', 'нож']]);
+});

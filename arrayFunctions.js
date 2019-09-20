@@ -19,6 +19,5 @@ const addValeToStart = (array, value) => {
 
 
 module.exports = {
-    deleteFirstElement, pushElementToEnd,
-    changeSecondElement,addValeToStart
+    deleteFirstElement, pushElementToEnd, changeSecondElement,addValeToStart,    
 };

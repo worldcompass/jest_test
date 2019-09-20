@@ -27,6 +27,25 @@ const getReversedSortedArray = array => {
     return array.sort().reverse();
 };
 
+const sortDishes = array => {
+    let dishes = [];
+    let couples = [];
+    let other = [];
+
+    array.map(x => {
+        if( x.includes('Тарелка') ) {
+            dishes.push(x);
+        } else if  ( x.includes('Чашка') ) {
+            couples.push(x);
+        } else {
+            other.push(x);
+        }
+        
+    });
+
+    return [dishes, couples, other].map(x => x.sort());
+};
+
 module.exports = { 
     getFirstPart,
     increaseEachItemBy2,
@@ -35,6 +54,7 @@ module.exports = {
     getAlltoUpperCase,
     getSortedArray,
     getReversedSortedArray,
+    sortDishes,
 };
 
 
